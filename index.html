@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="./dist/output.css" rel="stylesheet" /> -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              metalgreen: "#4EE1A0",
+              midnight: "#151515",
+              footerbg: "#242424",
+              metalgray: "#d9d9d9:",
+            },
+          },
+        },
+      };
+    </script>
     <link
       rel="icon"
       type="image/png"
@@ -15,106 +30,259 @@
       href="./assets/images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- <link rel="stylesheet" href="output.css" /> -->
+
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
-  <body class="bg-red-500">
-    <section class="introduction">
-      <h2>adamkeyes</h2>
+  <body class="bg-midnight text-white font-space-grotesk">
+    <div class="p-6">
+      <header class="flex flex-col align-middle justify-center gap-6">
+        <h2 class="text-center font-space-grotesk font-bold text-xl">
+          adamkeyes
+        </h2>
+        <div class="flex m-auto gap-4">
+          <img src="./assets/images/icon-github.svg" />
+          <img src="./assets/images/icon-frontend-mentor.svg" />
+          <img src="./assets/images/icon-linkedin.svg" />
+          <img src="./assets/images/icon-twitter.svg" />
+        </div>
+      </header>
+      <section
+        class="introduction flex flex-col justify-center mt-7 gap-3 pb-10"
+      >
+        <img
+          class="w-1/2 m-auto md:hidden"
+          src="./assets/images/image-profile-desktop.webp"
+        />
+        <h1 class="text-3xl text-center font-space-grotesk font-bold leading-8">
+          Nice to meet you!<br />
+          I'm
+          <span
+            class="underline decoration-metalgreen decoration-2 underline-offset-[15px]"
+            >Adam Keyes</span
+          >.
+        </h1>
 
-      <h1>Nice to meet you! I'm Adam Keyes.</h1>
+        <h3 class="text-sm text-center mt-6">
+          Based in the UK, I'm a front-end developer passionate about building
+          accessible web apps that users love.
+        </h3>
 
-      <h3>
-        Based in the UK, I'm a front-end developer passionate about building
-        accessible web apps that users love.
-      </h3>
+        <button
+          class="uppercase m-auto underline text-center pt-3 pb-8 decoration-metalgreen decoration-2 underline-offset-[15px]"
+        >
+          Contact me
+        </button>
+      </section>
+      <section class="skills flex flex-col justify-center text-center gap-5">
+        <hr />
+        <div class="mt-4">
+          <h5 class="text-2xl">HTML</h5>
+          <h6 class="text-sm">4 Years Experience</h6>
+        </div>
 
-      <h4>Contact me</h4>
-    </section>
-    <section class="skills">
-      <h5>HTML</h5>
-      <h6>4 Years Experience</h6>
+        <div>
+          <h5 class="text-2xl">CSS</h5>
+          <h6 class="text-sm">4 Years Experience</h6>
+        </div>
 
-      <h5>CSS</h5>
-      <h6>4 Years Experience</h6>
+        <div>
+          <h5 class="text-2xl">JavaScript</h5>
+          <h6 class="text-sm">4 Years Experience</h6>
+        </div>
 
-      <h5>JavaScript</h5>
-      <h6>4 Years Experience</h6>
+        <div>
+          <h5 class="text-2xl">Accessibility</h5>
+          <h6 class="text-sm">4 Years Experience</h6>
+        </div>
 
-      <h5>Accessibility</h5>
-      <h6>4 Years Experience</h6>
+        <div>
+          <h5 class="text-2xl">React</h5>
+          <h6 class="text-sm">3 Years Experience</h6>
+        </div>
 
-      <h5>React</h5>
-      <h6>3 Years Experience</h6>
+        <div class="mb-4">
+          <h5 class="text-2xl">Sass</h5>
+          <h6 class="text-sm">3 Years Experience</h6>
+        </div>
+        <hr />
+      </section>
 
-      <h5>Sass</h5>
-      <h6>3 Years Experience</h6>
+      <section class="projects-section">
+        <div class="flex justify-between pt-8 pb-4">
+          <h2 class="text-3xl mb-4">Projects</h2>
+          <button
+            class="uppercase text-md underline decoration-metalgreen decoration-2 underline-offset-[15px]"
+          >
+            Contact me
+          </button>
+        </div>
+        <div class="grid grid-cols-1 gap-y-16">
+          <div class="project-1 text-lg uppercase">
+            <img src="./assets/images/thumbnail-project-1-small.webp" />
+            <p class="pt-4 pb-1">Design portfolio</p>
+            <span class="mr-3 text-sm">HTML</span
+            ><span class="text-sm">CSS</span>
+            <div class="py-4">
+              <button
+                class="view-project mr-3 underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View project
+              </button>
+              <button
+                class="view-code underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View code
+              </button>
+            </div>
+          </div>
 
-      <h1>Projects</h1>
+          <div class="project-2 text-lg uppercase">
+            <img src="./assets/images/thumbnail-project-2-small.webp" />
+            <p class="pt-4 pb-1">E-learning landing pageo</p>
+            <span class="mr-3 text-sm">HTML</span
+            ><span class="text-sm">CSS</span>
+            <div class="py-4">
+              <button
+                class="view-project mr-3 underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View project
+              </button>
+              <button
+                class="view-code underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View code
+              </button>
+            </div>
+          </div>
 
-      <h4>Contact me</h4>
-    </section>
+          <div class="project-3 text-lg uppercase">
+            <img src="./assets/images/thumbnail-project-3-small.webp" />
+            <p class="pt-4 pb-1">Todo Web app</p>
+            <span class="mr-3 text-sm">HTML</span
+            ><span class="text-sm">CSS</span>
+            <div class="py-4">
+              <button
+                class="view-project mr-3 underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View project
+              </button>
+              <button
+                class="view-code underline uppercase decoration-metalgreen decoration-2 underline-offset-[10px]"
+              >
+                View code
+              </button>
+            </div>
+          </div>
 
-    <section class="projects">
-      <div class="project-1">
-        <p>Design portfolio</p>
-        <span>HTML</span><span>CSS</span>
-        <button class="view-project">View project</button>
-        <button class="view-code">View code</button>
+          <div class="project-4 text-lg uppercase">
+            <img src="./assets/images/thumbnail-project-4-small.webp" />
+            <p class="pt-4 pb-1">Entertainment Web app</p>
+            <span class="mr-3 text-sm">HTML</span
+            ><span class="mr-3 text-sm">CSS</span>
+            <span class="text-sm">JAVASCRIPT</span>
+            <div class="py-4">
+              <button
+                class="view-project mr-3 underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View project
+              </button>
+              <button
+                class="view-code underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View code
+              </button>
+            </div>
+          </div>
+
+          <div class="project-5 text-lg uppercase">
+            <img src="./assets/images/thumbnail-project-5-small.webp" />
+            <p class="pt-4 pb-1">Memory game</p>
+            <span class="mr-3 text-sm">HTML</span
+            ><span class="mr-3 text-sm">CSS</span>
+            <span class="text-sm">JAVASCRIPT</span>
+            <div class="py-4">
+              <button
+                class="view-project mr-3 underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View project
+              </button>
+              <button
+                class="view-code underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View code
+              </button>
+            </div>
+          </div>
+
+          <div class="project-6 text-lg uppercase">
+            <img src="./assets/images/thumbnail-project-6-small.webp" />
+            <p class="pt-4 pb-1">Art gallery showcase</p>
+            <span class="mr-3 text-sm">HTML</span
+            ><span class="mr-3 text-sm">CSS</span>
+            <span class="text-sm">JAVASCRIPT</span>
+            <div class="py-4">
+              <button
+                class="view-project mr-3 underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View project
+              </button>
+              <button
+                class="view-code underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px]"
+              >
+                View code
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="grid grid-cols-1 bg-footerbg p-6 gap-5">
+      <div class="text-center">
+        <h1 class="text-2xl my-4">Contact</h1>
+        <p class="text-sm">
+          I would love to hear about your project and how I could help. Please
+          fill in the form, and I’ll get back to you as soon as possible.
+        </p>
       </div>
 
-      <div class="project-2">
-        <p>E-learning landing page</p>
-        <span>HTML</span><span>CSS</span>
-        <button class="view-project">View project</button>
-        <button class="view-code">View code</button>
+      <form class="flex flex-col gap-4">
+        <label class="hidden">Name</label>
+        <input
+          placeholder="NAME"
+          class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm"
+        />
+        <label class="hidden">Email</label>
+        <input
+          placeholder="EMAIL"
+          class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm"
+        />
+        <label class="hidden">Message</label>
+        <input
+          placeholder="MESSAGE"
+          class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm placeholder:text-metalgray h-[100px]"
+        />
+
+        <button
+          type="submit"
+          class="text-right underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px] mt-4 text-sm mb-10"
+        >
+          Send message
+        </button>
+      </form>
+      <hr />
+      <div class="flex flex-col text-center py-4 gap-4">
+        <h2>adamkeyes</h2>
+        <div class="flex m-auto gap-4">
+          <img src="./assets/images/icon-github.svg" />
+          <img src="./assets/images/icon-frontend-mentor.svg" />
+          <img src="./assets/images/icon-linkedin.svg" />
+          <img src="./assets/images/icon-twitter.svg" />
+        </div>
       </div>
-
-      <div class="project-3">
-        <p>Todo web app</p>
-        <span>HTML</span> <span>CSS</span><span>JavaScript</span>
-        <button class="view-project">View project</button>
-        <button class="view-code">View code</button>
-      </div>
-
-      <div class="project-4">
-        <p>Entertainment web app</p>
-        <span>HTML</span> <span>CSS</span> <span>JavaScript</span>
-        <button class="view-project">View project</button>
-        <button class="view-code">View code</button>
-      </div>
-
-      <div class="project-5">
-        <p>Memory Game</p>
-        <span>HTML</span> <span>CSS</span> <span>JavaScript</span>
-        <button class="view-project">View project</button>
-        <button class="view-code">View code</button>
-      </div>
-
-      <div class="project-6">
-        <p>Art gallery showcase</p>
-        <span>HTML</span> <span>CSS</span><span>JavaScript</span>
-        <button class="view-project">View project</button>
-        <button class="view-code">View code</button>
-      </div>
-      <h1>Contact</h1>
-    </section>
-
-    <footer>
-      <p>
-        I would love to hear about your project and how I could help. Please
-        fill in the form, and I’ll get back to you as soon as possible.
-      </p>
-
-      <label>Name</label>
-      <input />
-      <label>Email</label>
-      <input />
-      <label>Message</label>
-      <input />
-
-      <button>Send message</button>
-
-      <h2>adamkeyes</h2>
     </footer>
   </body>
 </html>
