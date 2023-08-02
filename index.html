@@ -23,6 +23,10 @@
           fontFamily: {
             spacegrotesk: ["Space grotesk", "sans-serif"],
           },
+          backgroundImage: {
+            circlepattern: "url('./assets/images/pattern-circle.svg')",
+            ringspattern: "url('./assets/images/pattern-rings.svg')",
+          },
         },
       };
     </script>
@@ -67,7 +71,7 @@
         </div>
       </header>
       <section
-        class="introduction flex flex-col justify-center mt-7 gap-3 pb-10 sm:flex-row-reverse sm:justify-between"
+        class="introduction flex flex-col justify-center mt-7 gap-3 pb-10 sm:flex-row-reverse sm:justify-between back bg-[./assets/images/pattern-rings.svg]"
       >
         <img
           class="w-1/2 m-auto sm:hidden"
@@ -298,7 +302,9 @@
             placeholder="EMAIL"
             class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm uppercase"
           />
-          <p class="error-message hidden">Sorry, invalid format here</p>
+          <p class="error-message hidden text-right text-red-500 mt-0 text-sm">
+            Sorry, invalid format here
+          </p>
           <label for="message" class="hidden">Message</label>
           <input
             id="message"
@@ -308,7 +314,7 @@
 
           <button
             type="submit"
-            class="text-right underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px] mt-4 text-sm mb-10 hover:text-metalgreen"
+            class="submit-button text-right underline uppercase decoration-metalgreen decoration-2 underline-offset-[15px] mt-4 text-sm mb-10 hover:text-metalgreen"
           >
             Send message
           </button>

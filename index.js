@@ -3,18 +3,19 @@ const inputs = document.querySelectorAll("input");
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
 const messageInput = document.querySelector("#message");
+const submitButton = document.querySelector(".submit-button");
+const emailValue = emailInput.value;
+const emailValueCap = emailValue.toLowerCase();
 
 const errorMessage = document.querySelector(".error-message");
 
 function validate(emailInput) {
   let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  emailPatternLow = emailPattern.toLowerCase();
 
-  // Check if the email matches the pattern
-  return emailPatternLow.test(email);
+  return emailPattern.test(emailInput);
 }
 
-form.addEventListener("submit", (event) => {
+submitButton.addEventListener("click", (event) => {
   event.preventDefault();
   inputs.forEach((input) => {
     if (!input.value) {
@@ -22,16 +23,23 @@ form.addEventListener("submit", (event) => {
     } else {
       input.classList.add("border-green-500");
     }
-    // if (!validate(enail)) {
-    //   console.log("worka");
-    //   errorMessage.classList.add("block");
-    // }
   });
   if (validate(emailInput.value)) {
     console.log("worka");
     emailInput.classList.add("border-green-500");
-  } else {
     errorMessage.classList.add("hidden");
+  } else {
+    errorMessage.classList.remove("hidden");
     emailInput.classList.add("border-red-500");
   }
+});
+
+inputs.forEach((input) => {
+  input.addEventListener("keyup", (event) => {
+    if (input.value.length < 1) {
+      input.classList.add("border-red-500");
+    } else {
+      input.classList.remove("border-red-500");
+    }
+  });
 });
