@@ -48,10 +48,22 @@
           adamkeyes
         </h2>
         <div class="flex m-auto sm:m-0 gap-4 align-middle">
-          <img class="w-7 h-7" src="./assets/images/icon-github.svg" />
-          <img class="w-7 h-7" src="./assets/images/icon-frontend-mentor.svg" />
-          <img class="w-7 h-7" src="./assets/images/icon-linkedin.svg" />
-          <img class="w-7 h-7" src="./assets/images/icon-twitter.svg" />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-github.svg"
+          />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-frontend-mentor.svg"
+          />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-linkedin.svg"
+          />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-twitter.svg"
+          />
         </div>
       </header>
       <section
@@ -274,20 +286,24 @@
         </div>
 
         <form class="flex flex-col gap-4">
-          <label class="hidden">Name</label>
+          <label for="name" class="hidden">Name</label>
           <input
+            id="name"
             placeholder="NAME"
-            class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm"
+            class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm uppercase"
           />
-          <label class="hidden">Email</label>
+          <label for="email" class="hidden">Email</label>
           <input
+            id="email"
             placeholder="EMAIL"
-            class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm"
+            class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm uppercase"
           />
-          <label class="hidden">Message</label>
+          <p class="error-message hidden">Sorry, invalid format here</p>
+          <label for="message" class="hidden">Message</label>
           <input
+            id="message"
             placeholder="MESSAGE"
-            class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm placeholder:text-metalgray h-[100px]"
+            class="py-2 border-b border-white bg-footerbg placeholder:pl-2 text-sm placeholder:text-metalgray h-[100px] uppercase"
           />
 
           <button
@@ -304,12 +320,25 @@
       >
         <h2>adamkeyes</h2>
         <div class="flex m-auto sm:m-0 gap-4">
-          <img class="w-7 h-7" src="./assets/images/icon-github.svg" />
-          <img class="w-7 h-7" src="./assets/images/icon-frontend-mentor.svg" />
-          <img class="w-7 h-7" src="./assets/images/icon-linkedin.svg" />
-          <img class="w-7 h-7" src="./assets/images/icon-twitter.svg" />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-github.svg"
+          />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-frontend-mentor.svg"
+          />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-linkedin.svg"
+          />
+          <img
+            class="w-7 h-7 cursor-pointer"
+            src="./assets/images/icon-twitter.svg"
+          />
         </div>
       </div>
     </footer>
   </body>
+  <script src="index.js"></script>
 </html>
